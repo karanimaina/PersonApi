@@ -13,12 +13,12 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PersonService {
     private final PersonRepository personRepository;
-//    public List<Person>getAllPersons(){
-//       return personRepository.findAll();
-//    }
-    public Person  getPersonById(int id){
-        return personRepository.findById(id).orElse(null);
+    public List<Person>getAllPersons(){
+       return personRepository.findAll();
     }
+//    public Person  getPersonById(int id){
+//        return personRepository.findById(id).orElse(null);
+//    }
     public void deleteById(int id){
         personRepository.deleteAll();
     }
