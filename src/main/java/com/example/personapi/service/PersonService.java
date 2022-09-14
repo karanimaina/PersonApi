@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class PersonService {
+//public class PersonService {
     private final PersonRepository personRepository;
     public List<Person>getAllPersons(){
        return personRepository.findAll();
