@@ -18,5 +18,5 @@ public class Person {
     private int id;
     private String name;
     private String location;
-    private Boolean delete;
+//    private Boolean delete;
 }
