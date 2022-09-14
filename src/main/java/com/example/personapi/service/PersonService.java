@@ -16,12 +16,12 @@ public class PersonService {
     public List<Person>getAllPersons(){
        return personRepository.findAll();
     }
-//    public Person  getPersonById(int id){
-//        return personRepository.findById(id).orElse(null);
-//    }
-    public void deleteById(int id){
-        personRepository.deleteAll();
+    public Person  getPersonById(int id){
+        return personRepository.findById(id).orElse(null);
     }
+//    public void deleteById(int id){
+//        personRepository.deleteAll();
+//    }
     public void deleteAll(){
         personRepository.deleteAll();
     }
