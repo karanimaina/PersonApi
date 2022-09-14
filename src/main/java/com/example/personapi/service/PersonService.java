@@ -25,11 +25,11 @@ public class PersonService {
 //    public void deleteAll(){
 //        personRepository.deleteAll();
 //    }
-    public Person saveData(Person person){
-        if(personRepository.findByName(person.getName())== null){
-            personRepository.save(person);
-        }
-        throw new ItemAlreadyExistsException("person with "+person.getName()+"already exists");
-    }
+//    public Person saveData(Person person){
+//        if(personRepository.findByName(person.getName())== null){
+//            personRepository.save(person);
+//        }
+//        throw new ItemAlreadyExistsException("person with "+person.getName()+"already exists");
+//    }
 
 }
