@@ -19,12 +19,12 @@ public class PersonService {
     public Person  getPersonById(int id){
         return personRepository.findById(id).orElse(null);
     }
-//    public void deleteById(int id){
-//        personRepository.deleteAll();
-//    }
-    public void deleteAll(){
+    public void deleteById(int id){
         personRepository.deleteAll();
     }
+//    public void deleteAll(){
+//        personRepository.deleteAll();
+//    }
     public Person saveData(Person person){
         if(personRepository.findByName(person.getName())== null){
             personRepository.save(person);
