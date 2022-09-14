@@ -16,20 +16,21 @@ public class PersonService {
     public List<Person>getAllPersons(){
        return personRepository.findAll();
     }
-    public Person  getPersonById(int id){
+    public Person  getPersonById(long id){
         return personRepository.findById(id).orElse(null);
     }
-    public void deleteById(int id){
+    public void deleteById(str id){
+        Person person = personRepository.findByNameAndSoftDeleteFalse(id);
         personRepository.deleteAll();
     }
-//    public void deleteAll(){
-//        personRepository.deleteAll();
-//    }
-//    public Person saveData(Person person){
-//        if(personRepository.findByName(person.getName())== null){
-//            personRepository.save(person);
-//        }
-//        throw new ItemAlreadyExistsException("person with "+person.getName()+"already exists");
-//    }
+    public void deleteAll(){
+        personRepository.deleteAll();
+    }
+    public Person saveData(Person person){
+        if(personRepository.findByName(person.getName())== null){
+            personRepository.save(person);
+        }
+        throw new ItemAlreadyExistsException("person with "+person.getName()+"already exists");
+    }
 
 }
