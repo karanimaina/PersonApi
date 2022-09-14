@@ -8,6 +8,7 @@ import java.util.Date;
 @Entity
 //@Table specifies the table name
 @AllArgsConstructor
+//generates no args Constructor
 @NoArgsConstructor
 public class Person {
     @Id
