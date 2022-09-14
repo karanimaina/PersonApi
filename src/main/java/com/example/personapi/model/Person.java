@@ -10,10 +10,11 @@ import java.util.Date;
 @AllArgsConstructor
 //generates no args Constructor
 @NoArgsConstructor
+//@Table(name = "person")
 public class Person {
     @Id
 //    default id is of sequence
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 //    @Column specifies the columb mapping
     private String name;
