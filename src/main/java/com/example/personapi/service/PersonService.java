@@ -11,11 +11,11 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-//public class PersonService {
-//    private final PersonRepository personRepository;
-    public List<Person>getAllPersons(){
-       return personRepository.findAll();
-    }
+public class PersonService {
+    private final PersonRepository personRepository;
+//    public List<Person>getAllPersons(){
+//       return personRepository.findAll();
+//    }
     public Person  getPersonById(int id){
         return personRepository.findById(id).orElse(null);
     }
