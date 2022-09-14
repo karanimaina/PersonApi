@@ -1,23 +1,22 @@
 package com.example.personapi.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
 @Entity
-//@Table specifies the table name
 @AllArgsConstructor
-//generates no args Constructor
 @NoArgsConstructor
-//@Table(name = "person")
+@Getter
+@Setter
 public class Person {
     @Id
-//    default id is of sequence
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-//    @Column specifies the columb mapping
     private String name;
-    private String location ;
-    private Date birthDate;
+    private String location;
+    private Boolean delete;
 }
