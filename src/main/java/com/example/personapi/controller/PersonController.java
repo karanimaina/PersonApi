@@ -35,10 +35,10 @@ public class PersonController {
     UniversalResponse addPersons(Gerson person){
         Gerson gerson = personService.saveData(person);
         return UniversalResponse.builder()
-//                .status(201)
-//                .message("person added succesfully")
-//                .data(gerson)
-//                .build();
+                .status(201)
+                .message("person added succesfully")
+                .data(gerson)
+                .build();
 //    }
 //    @DeleteMapping("delete")
 //    UniversalResponse deletePerson(long id){
