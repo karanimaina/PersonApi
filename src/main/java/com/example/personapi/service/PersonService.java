@@ -1,7 +1,7 @@
 package com.example.personapi.service;//package com.example.personapi.service;
 
-import com.example.personapi.exception.ItemAlreadyExistsException;
-import com.example.personapi.exception.ItemNotFoundException;
+import com.example.personapi.exceptions.ItemAlreadyExistsException;
+import com.example.personapi.exceptions.ItemNotFoundException;
 import com.example.personapi.model.Gerson;
 import com.example.personapi.repository.GersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;

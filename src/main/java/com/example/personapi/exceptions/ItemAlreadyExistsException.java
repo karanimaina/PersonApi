@@ -1,4 +1,4 @@
-package com.example.personapi.exception;
+package com.example.personapi.exceptions;
 
 public class ItemAlreadyExistsException extends IllegalArgumentException {
     public ItemAlreadyExistsException(String s) {
