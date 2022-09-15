@@ -1,9 +1,6 @@
 package com.example.personapi.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -12,11 +9,11 @@ import java.util.Date;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Person {
+public class Gerson {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String location;
-    private Boolean SoftDelete;
+    private Boolean softDelete;
 }

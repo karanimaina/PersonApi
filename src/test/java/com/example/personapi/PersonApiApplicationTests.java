@@ -8,7 +8,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = PersonApiApplication.class)
 class PersonApiApplicationTests {
-
     @Test
     void contextLoads() {
     }
