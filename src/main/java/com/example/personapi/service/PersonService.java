@@ -24,7 +24,7 @@ public class PersonService {
         return person;
     }
     public void deleteById(long id){
-//        Person person = personRepository.findByIdAndSoftDeleteFalse(id).orElse(null);
+        Person person = personRepository.findByIdAndSoftDeleteFalse(id).orElse(null);
 //      if (person == null){
 //          throw new ItemNotFoundException("person does not exist");
 //      }else {
