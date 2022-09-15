@@ -14,7 +14,7 @@ import java.util.List;
 public class PersonController {
     private final PersonService personService;
     @GetMapping("/all")
-//    UniversalResponse getAllPersons(){
+    UniversalResponse getAllPersons(){
 //        List<Gerson>gersons = personService.getAllPersons();
 //       return UniversalResponse.builder()
 //                .status(200)
