@@ -16,12 +16,12 @@ public class PersonController {
     @GetMapping("/all")
     UniversalResponse getAllPersons(){
         List<Gerson>gersons = personService.getAllPersons();
-//       return UniversalResponse.builder()
-//                .status(200)
-//                .message("data retrieved successfully")
-//                .data(gersons)
-//                .build();
-//    }
+       return UniversalResponse.builder()
+                .status(200)
+                .message("data retrieved successfully")
+                .data(gersons)
+                .build();
+    }
 //    @GetMapping("/{id}")
 //    UniversalResponse getPersonById(@PathVariable ("id") long id){
 //        Gerson gerson = personService.getPersonById(id);
