@@ -25,11 +25,16 @@ package com.example.personapi.repository;
 import com.example.personapi.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface PersonRepository extends JpaRepository<Person,Long> {
-    Person findByName(String name);
-   Optional<Person>findByNameAndSoftDeleteFalse(String person);
+    List<Person>findAllBySoftDeleteFalse();
+//   Optional<Person>findByIdAndSoftDeleteFalse(long personId);
+//
+//   Optional<Person>findByNameAndSoftDeleteFalse(String name);
+
+
 
 
 }
