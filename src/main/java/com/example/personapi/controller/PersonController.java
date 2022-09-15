@@ -15,7 +15,7 @@ public class PersonController {
     private final PersonService personService;
     @GetMapping("/all")
     UniversalResponse getAllPersons(){
-//        List<Gerson>gersons = personService.getAllPersons();
+        List<Gerson>gersons = personService.getAllPersons();
 //       return UniversalResponse.builder()
 //                .status(200)
 //                .message("data retrieved successfully")
