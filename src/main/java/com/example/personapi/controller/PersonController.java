@@ -56,7 +56,8 @@ public class PersonController {
                 .message("success")
                 .data(personService.deleteAll())
                 .build();
-//    }
-//
-//
-//}
+
+    }
+
+
+}
