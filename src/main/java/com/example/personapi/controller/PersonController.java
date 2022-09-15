@@ -52,10 +52,10 @@ public class PersonController {
     @DeleteMapping("/delete/all")
     UniversalResponse deleteAllPerson(){
         return  UniversalResponse.builder()
-//                .status(200)
-//                .message("success")
-//                .data(personService.deleteAll())
-//                .build();
+                .status(200)
+                .message("success")
+                .data(personService.deleteAll())
+                .build();
 //    }
 //
 //
