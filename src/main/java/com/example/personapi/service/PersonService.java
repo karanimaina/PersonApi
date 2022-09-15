@@ -36,10 +36,9 @@ public class PersonService {
         if (persons.isEmpty()){
             throw new ItemNotFoundException("oops no data available for deletion");
         }else {
-//            personRepository.deleteAll();
-//        }
-//
-//    }
+            personRepository.deleteAll();
+        }
+    }
 //    public Person saveData(Person person){
 //        Person person1 = personRepository.findByNameAndSoftDeleteFalse(person.getName()).orElse(null);
 //        if (person1==null){
