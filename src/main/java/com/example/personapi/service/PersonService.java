@@ -28,9 +28,9 @@ public class PersonService {
       if (person == null){
           throw new ItemNotFoundException("person does not exist");
       }else {
-//          personRepository.deleteById(id);
-//      }
-//    }
+          personRepository.deleteById(id);
+      }
+    }
 //    public void deleteAll(){
 //        List<Person>persons = personRepository.findAllBySoftDeleteFalse();
 //        if (persons.isEmpty()){
