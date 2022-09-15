@@ -48,7 +48,7 @@ public class PersonService {
             person1.setLocation(person.getLocation());
             personRepository.save(person1);
         }
-//        return  person1;
-//    }
-//
-//}
+        return  person1;
+    }
+
+}
