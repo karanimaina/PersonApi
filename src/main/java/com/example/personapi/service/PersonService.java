@@ -16,13 +16,13 @@ public class PersonService {
     public List<Person>getAllPersons(){
        return personRepository.findAllBySoftDeleteFalse();
     }
-//    public Person  getPersonById(long id){
-//        Person person =  personRepository.findByIdAndSoftDeleteFalse(id).orElse(null);
+    public Person  getPersonById(long id){
+        Person person =  personRepository.findByIdAndSoftDeleteFalse(id).orElse(null);
 //        if (person==null){
 //            throw  new ItemNotFoundException("person does not exist");
 //        }
-//        return person;
-//    }
+        return person;
+    }
 //    public void deleteById(long id){
 //        Person person = personRepository.findByIdAndSoftDeleteFalse(id).orElse(null);
 //      if (person == null){
