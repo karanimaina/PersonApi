@@ -12,8 +12,8 @@ import java.util.Date;
 public class Gerson {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id;
     private String name;
     private String location;
-    private Boolean softDelete;
+    private Boolean softDelete=false;
 }

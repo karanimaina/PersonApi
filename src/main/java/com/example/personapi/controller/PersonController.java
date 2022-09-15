@@ -32,7 +32,7 @@ public class PersonController {
                 .build();
     }
     @PostMapping("/add")
-    UniversalResponse addPersons(Gerson person){
+    UniversalResponse addPersons(@RequestBody Gerson person){
         Gerson gerson = personService.saveData(person);
         return UniversalResponse.builder()
                 .status(201)
@@ -40,8 +40,8 @@ public class PersonController {
                 .data(gerson)
                 .build();
     }
-    @DeleteMapping("delete")
-    UniversalResponse deletePerson(long id){
+    @DeleteMapping("/delete")
+    UniversalResponse deletePerson(@RequestParam long id){
      Gerson gerson = personService.deleteById(id);
         return  UniversalResponse.builder()
                 .status(200)
