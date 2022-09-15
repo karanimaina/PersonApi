@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("person")
 public class PersonController {
-//    private final PersonService personService;
+    private final PersonService personService;
 //    @GetMapping("/all")
 //    UniversalResponse getAllPersons(){
 //        List<Gerson>gersons = personService.getAllPersons();
