@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public interface GersonRepository extends JpaRepository<Gerson,Long> {
     List<Gerson>findAllBySoftDeleteFalse();
-//    Optional<Gerson>findByIdAndSoftDeleteFalse(long personId);
+    Optional<Gerson>findByIdAndSoftDeleteFalse(long personId);
 //    Gerson findByNameAndSoftDeleteFalse(String name);
 //
 //    Gerson deleteGersonById(long gersonId);
