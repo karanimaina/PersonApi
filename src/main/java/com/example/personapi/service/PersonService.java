@@ -40,7 +40,7 @@ public class PersonService {
         }
     }
     public Person saveData(Person person){
-//        Person person1 = personRepository.findByNameAndSoftDeleteFalse(person.getName()).orElse(null);
+        Person person1 = personRepository.findByNameAndSoftDeleteFalse(person.getName()).orElse(null);
 //        if (person1==null){
 //            personRepository.save(person);
 //        }else {
