@@ -18,9 +18,9 @@ public class PersonService {
     }
     public Person  getPersonById(long id){
         Person person =  personRepository.findByIdAndSoftDeleteFalse(id).orElse(null);
-//        if (person==null){
-//            throw  new ItemNotFoundException("person does not exist");
-//        }
+        if (person==null){
+            throw  new ItemNotFoundException("person does not exist");
+        }
         return person;
     }
 //    public void deleteById(long id){
