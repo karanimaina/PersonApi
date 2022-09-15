@@ -1,4 +1,4 @@
-package com.example.personapi.service.exception;
+package com.example.personapi.exception;
 
 public class ItemNotFoundException extends IllegalArgumentException {
     public ItemNotFoundException(String s) {
