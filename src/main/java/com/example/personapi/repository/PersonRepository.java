@@ -30,7 +30,7 @@ import java.util.Optional;
 
 public interface PersonRepository extends JpaRepository<Person,Long> {
     List<Person>findAllBySoftDeleteFalse();
-//   Optional<Person>findByIdAndSoftDeleteFalse(long personId);
+   Optional<Person>findByIdAndSoftDeleteFalse(long personId);
 //
 //   Optional<Person>findByNameAndSoftDeleteFalse(String name);
 
