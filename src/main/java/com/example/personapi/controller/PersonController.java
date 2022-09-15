@@ -42,12 +42,12 @@ public class PersonController {
     }
     @DeleteMapping("delete")
     UniversalResponse deletePerson(long id){
-//     Gerson gerson = personService.deleteById(id);
-//        return  UniversalResponse.builder()
-//                .status(200)
-//                .data(gerson)
-//                .build();
-//    }
+     Gerson gerson = personService.deleteById(id);
+        return  UniversalResponse.builder()
+                .status(200)
+                .data(gerson)
+                .build();
+    }
 //    @DeleteMapping("/delete/all")
 //    UniversalResponse deleteAllPerson(){
 //        return  UniversalResponse.builder()
