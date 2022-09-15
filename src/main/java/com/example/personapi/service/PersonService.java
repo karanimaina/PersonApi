@@ -33,9 +33,9 @@ public class PersonService {
     }
     public void deleteAll(){
         List<Person>persons = personRepository.findAllBySoftDeleteFalse();
-//        if (persons.isEmpty()){
-//            throw new ItemNotFoundException("oops no data available for deletion");
-//        }else {
+        if (persons.isEmpty()){
+            throw new ItemNotFoundException("oops no data available for deletion");
+        }else {
 //            personRepository.deleteAll();
 //        }
 //
