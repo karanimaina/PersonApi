@@ -46,10 +46,11 @@ public class PersonController {
         return  UniversalResponse.builder()
                 .status(200)
                 .data(gerson)
+                .message("delete success")
                 .build();
     }
-//    @DeleteMapping("/delete/all")
-//    UniversalResponse deleteAllPerson(){
+    @DeleteMapping("/delete/all")
+    UniversalResponse deleteAllPerson(){
 //        return  UniversalResponse.builder()
 //                .status(200)
 //                .message("success")
