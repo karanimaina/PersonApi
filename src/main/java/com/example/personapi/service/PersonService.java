@@ -13,9 +13,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PersonService {
     private final PersonRepository personRepository;
-//    public List<Person>getAllPersons(){
-//       return personRepository.findAllBySoftDeleteFalse();
-//    }
+    public List<Person>getAllPersons(){
+       return personRepository.findAllBySoftDeleteFalse();
+    }
 //    public Person  getPersonById(long id){
 //        Person person =  personRepository.findByIdAndSoftDeleteFalse(id).orElse(null);
 //        if (person==null){
