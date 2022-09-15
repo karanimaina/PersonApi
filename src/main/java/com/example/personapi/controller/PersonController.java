@@ -22,7 +22,7 @@ public class PersonController {
                 .data(gersons)
                 .build();
     }
-//    @GetMapping("/{id}")
+    @GetMapping("/{id}")
 //    UniversalResponse getPersonById(@PathVariable ("id") long id){
 //        Gerson gerson = personService.getPersonById(id);
 //        return UniversalResponse.builder()
