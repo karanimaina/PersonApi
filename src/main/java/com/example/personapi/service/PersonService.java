@@ -40,7 +40,10 @@ public class PersonService {
       if (gerson == null){
           throw new ItemNotFoundException("person does not exist");
       }
-      return gersonRepository.deleteGersonById(id);
+      gersonRepository.deleteById(gerson.getId());
+//      gerson.setSoftDelete(true);
+//      return gersonRepository.save(gerson);
+        return gerson;
     }
     public String deleteAll(){
         List<Gerson>persons = gersonRepository.findAllBySoftDeleteFalse();

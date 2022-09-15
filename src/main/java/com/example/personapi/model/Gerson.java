@@ -1,5 +1,6 @@
 package com.example.personapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -15,5 +16,6 @@ public class Gerson {
     private long id;
     private String name;
     private String location;
+    @JsonIgnore
     private Boolean softDelete=false;
 }

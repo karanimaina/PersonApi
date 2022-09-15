@@ -4,6 +4,8 @@ import com.example.personapi.model.Gerson;
 import com.example.personapi.response.UniversalResponse;
 import com.example.personapi.service.PersonService;
 import lombok.RequiredArgsConstructor;
+import org.apache.coyote.Response;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,48 +16,49 @@ import java.util.List;
 public class PersonController {
     private final PersonService personService;
     @GetMapping("/all")
-    UniversalResponse getAllPersons(){
+    ResponseEntity<UniversalResponse> getAllPersons(){
         List<Gerson>gersons = personService.getAllPersons();
-       return UniversalResponse.builder()
+       return ResponseEntity.ok().body(UniversalResponse.builder()
                 .status(200)
                 .message("data retrieved successfully")
                 .data(gersons)
-                .build();
+                .build());
+
     }
     @GetMapping("/{id}")
-    UniversalResponse getPersonById(@PathVariable ("id") long id){
+   ResponseEntity<UniversalResponse> getPersonById(@PathVariable ("id") long id){
         Gerson gerson = personService.getPersonById(id);
-        return UniversalResponse.builder()
+        return ResponseEntity.ok().body(UniversalResponse.builder()
                 .status(200)
                 .data(gerson)
                 .message("success")
-                .build();
+                .build());
     }
     @PostMapping("/add")
-    UniversalResponse addPersons(@RequestBody Gerson person){
+    ResponseEntity<UniversalResponse> addPersons(@RequestBody Gerson person){
         Gerson gerson = personService.saveData(person);
-        return UniversalResponse.builder()
+        return ResponseEntity.ok().body(UniversalResponse.builder()
                 .status(201)
                 .message("person added succesfully")
                 .data(gerson)
-                .build();
+                .build());
     }
     @DeleteMapping("/delete")
-    UniversalResponse deletePerson(@RequestParam long id){
+    ResponseEntity<UniversalResponse> deletePerson(@RequestParam long id){
      Gerson gerson = personService.deleteById(id);
-        return  UniversalResponse.builder()
+        return  ResponseEntity.ok().body(UniversalResponse.builder()
                 .status(200)
                 .data(gerson)
                 .message("delete success")
-                .build();
+                .build());
     }
     @DeleteMapping("/delete/all")
-    UniversalResponse deleteAllPerson(){
-        return  UniversalResponse.builder()
+   ResponseEntity<UniversalResponse> deleteAllPerson(){
+        return ResponseEntity.ok().body(UniversalResponse.builder()
                 .status(200)
                 .message("success")
                 .data(personService.deleteAll())
-                .build();
+                .build());
 
     }
 
