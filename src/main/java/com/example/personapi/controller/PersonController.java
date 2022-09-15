@@ -23,9 +23,9 @@ public class PersonController {
                 .build();
     }
     @GetMapping("/{id}")
-//    UniversalResponse getPersonById(@PathVariable ("id") long id){
-//        Gerson gerson = personService.getPersonById(id);
-//        return UniversalResponse.builder()
+    UniversalResponse getPersonById(@PathVariable ("id") long id){
+        Gerson gerson = personService.getPersonById(id);
+        return UniversalResponse.builder()
 //                .status(200)
 //                .data(gerson)
 //                .message("success")
