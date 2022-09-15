@@ -30,11 +30,11 @@ public class PersonController {
                 .data(gerson)
                 .message("success")
                 .build();
-//    }
-//    @PostMapping("/add")
-//    UniversalResponse addPersons(Gerson person){
-//        Gerson gerson = personService.saveData(person);
-//        return UniversalResponse.builder()
+    }
+    @PostMapping("/add")
+    UniversalResponse addPersons(Gerson person){
+        Gerson gerson = personService.saveData(person);
+        return UniversalResponse.builder()
 //                .status(201)
 //                .message("person added succesfully")
 //                .data(gerson)
