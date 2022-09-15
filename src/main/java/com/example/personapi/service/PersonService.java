@@ -45,15 +45,15 @@ public class PersonService {
       }
       return gersonRepository.deleteGersonById(id);
     }
-//    public String deleteAll(){
-//        List<Gerson>persons = gersonRepository.findAllBySoftDeleteFalse();
-//        if (persons.isEmpty()){
-//            throw new ItemNotFoundException("oops no data available for deletion");
-//        }else {
-//            gersonRepository.deleteAll();
-//        }
-//        return "deleted" ;
-//    }
-//
-//
-//}
+    public String deleteAll(){
+        List<Gerson>persons = gersonRepository.findAllBySoftDeleteFalse();
+        if (persons.isEmpty()){
+            throw new ItemNotFoundException("oops no data available for deletion");
+        }else {
+            gersonRepository.deleteAll();
+        }
+        return "deleted" ;
+    }
+
+
+}
