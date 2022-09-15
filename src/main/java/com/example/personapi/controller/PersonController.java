@@ -39,9 +39,9 @@ public class PersonController {
                 .message("person added succesfully")
                 .data(gerson)
                 .build();
-//    }
-//    @DeleteMapping("delete")
-//    UniversalResponse deletePerson(long id){
+    }
+    @DeleteMapping("delete")
+    UniversalResponse deletePerson(long id){
 //     Gerson gerson = personService.deleteById(id);
 //        return  UniversalResponse.builder()
 //                .status(200)
