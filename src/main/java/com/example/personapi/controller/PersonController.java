@@ -26,10 +26,10 @@ public class PersonController {
     UniversalResponse getPersonById(@PathVariable ("id") long id){
         Gerson gerson = personService.getPersonById(id);
         return UniversalResponse.builder()
-//                .status(200)
-//                .data(gerson)
-//                .message("success")
-//                .build();
+                .status(200)
+                .data(gerson)
+                .message("success")
+                .build();
 //    }
 //    @PostMapping("/add")
 //    UniversalResponse addPersons(Gerson person){
