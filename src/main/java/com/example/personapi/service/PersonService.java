@@ -38,13 +38,13 @@ public class PersonService {
              return  person;
 
     }
-//    public Gerson deleteById(long id){
-//        Gerson gerson = gersonRepository.findByIdAndSoftDeleteFalse(id).orElse(null);
-//      if (gerson == null){
-//          throw new ItemNotFoundException("person does not exist");
-//      }
-//      return gersonRepository.deleteGersonById(id);
-//    }
+    public Gerson deleteById(long id){
+        Gerson gerson = gersonRepository.findByIdAndSoftDeleteFalse(id).orElse(null);
+      if (gerson == null){
+          throw new ItemNotFoundException("person does not exist");
+      }
+      return gersonRepository.deleteGersonById(id);
+    }
 //    public String deleteAll(){
 //        List<Gerson>persons = gersonRepository.findAllBySoftDeleteFalse();
 //        if (persons.isEmpty()){
