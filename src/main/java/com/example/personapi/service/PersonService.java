@@ -26,18 +26,18 @@ public class PersonService {
         }
         return person;
     }
-//    public Gerson saveData(Gerson person){
-//        Gerson gerson = gersonRepository.findByNameAndSoftDeleteFalse(person.getName());
-//            gersonRepository.save(person);
-//
-//           if (gerson!=null){
-//          throw  new ItemAlreadyExistsException("item already exists");
-//       }else {
-//           gersonRepository.save(person);
-//           }
-//             return  person;
-//
-//    }
+    public Gerson saveData(Gerson person){
+        Gerson gerson = gersonRepository.findByNameAndSoftDeleteFalse(person.getName());
+            gersonRepository.save(person);
+
+           if (gerson!=null){
+          throw  new ItemAlreadyExistsException("item already exists");
+       }else {
+           gersonRepository.save(person);
+           }
+             return  person;
+
+    }
 //    public Gerson deleteById(long id){
 //        Gerson gerson = gersonRepository.findByIdAndSoftDeleteFalse(id).orElse(null);
 //      if (gerson == null){
