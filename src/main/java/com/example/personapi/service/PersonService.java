@@ -27,7 +27,7 @@ public class PersonService {
     }
     public Gerson saveData(Gerson person){
         Gerson gerson = gersonRepository.findByNameAndSoftDeleteFalse(person.getName());
-           if (gerson!=null){
+           if (gerson != null){
           throw  new ItemAlreadyExistsException("item already exists");
        }else {
           person = gersonRepository.save(person);
